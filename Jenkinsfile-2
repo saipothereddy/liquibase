@@ -2,9 +2,6 @@ pipeline {
   agent {
     docker { image 'liquibase/liquibase:latest' }
   }
-  environment {
-    MARIADB_CREDS=credentials('mariadb-credentials')
-  }
   stages {
     stage('Status') {
       steps {
